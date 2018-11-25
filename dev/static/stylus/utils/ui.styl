@@ -1,0 +1,82 @@
+.input
+  border: 1px solid $gray
+  border-radius: 3px
+  padding: 11px 15px 9px
+
+  font-family mainFont
+  font-size: 14px
+  line-height: 14px
+  color: $gray_dark
+
+  &_icon
+    padding-left: 40px
+    background-repeat: no-repeat
+
+  &_login
+    background-image: url('../img/general/auth-login.png')
+    background-position: 13px 9px;
+
+  &_password
+    background-image: url('../img/general/auth-password.png')
+    background-position: 13px 9px;
+
+.checkbox
+  cursor: pointer
+  user-select: none
+
+  input
+    display: none
+
+    &:checked + span::after
+      display: block
+
+  span
+    position: relative
+    padding-left: 31px
+
+    color: $gray_dark
+    font-size: 14px
+    line-height: 14px
+
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: -3px
+      left: 0
+      width: 21px
+      height: 21px
+      border: 1px solid $gray_light
+      border-radius: 3px
+      background-color: $white
+
+    &::after
+      content: ''
+      display: none
+      position: absolute
+      top: 2px
+      left: 5px
+      width: 11px
+      height: 11px
+      border-radius: 3px
+      background-color: $blue
+
+.button
+  display: block
+  width: 175px
+  height: 43px
+  background: $green
+  border: 1px solid transparent
+  transition: .3s all
+  cursor: pointer
+
+  font-family: 'Akrobat', sans-serif;
+  font-weight: bold
+  text-align: center
+  color: $white
+  text-transform: uppercase
+
+  &:hover
+    color: $green
+    background: transparent
+    border-color: $green

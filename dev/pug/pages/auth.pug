@@ -1,0 +1,28 @@
+extends ../layout/auth
+
+block variables
+    - var title = 'Авторизация'
+    - var pageClass = 'auth'
+
+block auth
+    .auth__wrapper
+        .auth__block
+            .auth__logo
+                a(href='#')
+                    img(src='/static/img/general/logo.png')
+            .auth__avatar
+                img(src='/static/img/general/auth-avatar.png')
+            .auth__form.form
+                form.form__list
+                    .form__item
+                        input.input.input_icon.input_login(type='text' placeholder='ЛОГИН')
+                    .form__item
+                        input.input.input_icon.input_password(type='password' placeholder='ПАРОЛЬ')
+                    .form__item.form__item_remember
+                        label.checkbox(for='auth-ch')
+                            input(type='checkbox' id='auth-ch')
+                            span Запомнить меня
+                    .form__item.form__item_submit
+                        button.button Войти
+
+

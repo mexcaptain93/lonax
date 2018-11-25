@@ -15,13 +15,13 @@ module.exports = function() {
                 parserOptions: { xmlMode: true }
             }))
             .pipe($.gp.replace('&gt;', '>'))
-            .pipe($.gp.svgSprite({
-                mode: {
-                    symbol: {
-                        sprite: "sprite.svg"
-                    }
-                }
-            }))
+            // .pipe($.gp.svgSprite({
+            //     mode: {
+            //         symbol: {
+            //             sprite: "sprite.svg"
+            //         }
+            //     }
+            // }))
             .pipe($.gulp.dest('./build/static/img/svg/'));
     });
 };

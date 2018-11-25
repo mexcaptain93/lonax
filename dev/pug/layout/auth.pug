@@ -9,7 +9,7 @@ html(lang="ru-RU")
         <!--[if IE]>
         meta(http-equiv='X-UA-Compatible', content="IE = edge")
         <![endif]-->
-        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="viewport" content="width=900,initial-scale=1")
         meta(name="keywords" content="")
 
         link(rel="stylesheet" type='text/css' href="static/css/main.css")
@@ -18,11 +18,8 @@ html(lang="ru-RU")
         script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
         <![endif]-->
     body(class=pageClass)
-        .wrapper
-            include ../modules/header
-            .content
-                block content
-            include ../modules/footer
+        block auth
+
         script(src="static/js/jquery.js")
         script(src="static/js/libs.min.js")
         script(src="static/js/main.js")
