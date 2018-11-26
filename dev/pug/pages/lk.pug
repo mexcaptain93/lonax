@@ -64,4 +64,109 @@ block content
             a(href='#').button
                 i
                 span Обновить
+    .lk__stat.stat
+        .stat__heading-toggler
+            .stat__heading
+                span Статистика по статусам заказов
+            .stat__toggler.toggler
+                .toggler__list
+                    .toggler__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span a
+                    .toggler__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span b
+        .stat__table-graph
+            .stat__table.table
+                .table__th
+                    .table__label
+                        span Статусы:
+                    .table__label
+                        span Сумма заказов:
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_green
+                            .status__name
+                                span Выполнено
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_blue
+                            .status__name
+                                span В обработке
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_orange
+                            .status__name
+                                span В работе
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_violet
+                            .status__name
+                                span Отгружено
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_red
+                            .status__name
+                                span Отказ
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_gray
+                            .status__name
+                                span Рекламация
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+            .stat__data.data
+                .data__diag
+                    img(src='/static/img/content/diag.png')
+                .data__graph
+                    img(src='/static/img/content/graph.png')
+
+
+
+
+
+
+
 

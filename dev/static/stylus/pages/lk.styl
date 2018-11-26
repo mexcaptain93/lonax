@@ -66,6 +66,7 @@
     display: flex
     justify-content: space-between
     align-items: center
+    margin-bottom: 26px
 
     .presets-date
       display: inline-flex
@@ -106,3 +107,147 @@
           position: relative
           top: 3px
           margin-right: 13px
+  
+  &__stat
+    background-color: $gray_light3
+    padding: 36px 36px 56px
+
+    .stat
+
+      &__heading-toggler
+        display: flex
+        justify-content: space-between
+        margin-bottom: 35px
+
+      &__heading
+        font-size: 20px
+        line-height: 20px
+        color: $gray_dark2
+        text-transform: uppercase
+        font-weight: 700
+
+      &__toggler
+        display: none
+
+      &__table-graph
+        display: flex
+        justify-content: space-between
+
+      &__table
+        display: table
+        width: 555px
+
+        .table
+
+          &__th
+            display: table-row
+
+          &__tr
+            display: table-row
+
+          &__label
+            display: table-cell
+            padding-bottom: 15px
+
+            font-size: 16px
+            font-weight: 700
+            text-transform: uppercase
+
+          &__status
+            display: table-cell
+            width: 321px
+            padding-bottom: 13px
+
+            .status
+
+              &__wrap
+                display: flex
+                align-items: center
+                position: relative
+
+                &::after
+                  content: ''
+                  position: absolute
+                  right: 47px
+                  top: 10px
+                  display: block
+                  height: 1px
+                  width: 120px
+                  background-image: url('../img/general/icon-line.png')
+
+
+              &__color
+                width: 17px
+                height: 17px
+                border-radius: 50%
+                margin-right: 10px
+
+                &_green
+                  background-color: $green
+
+                &_blue
+                  background-color: $blue
+
+                &_orange
+                  background-color: $orange
+
+                &_violet
+                  background-color: $violet
+
+                &_red
+                  background-color: $red
+
+                &_gray
+                  background-color: $gray_dark
+
+
+
+
+
+              &__name
+
+                color: $gray_dark
+                font-size: 16px
+                font-weight: 600
+                text-transform: uppercase
+
+          &__sum
+            display: table-cell
+
+            .sum
+
+              &__wrap
+                display: flex
+                justify-content: space-between
+                position: relative
+
+                &::after
+                  content: ''
+                  position: absolute
+                  right: 77px
+                  top: 7px
+                  display: block
+                  height: 1px
+                  width: 40px
+                  background-image: url('../img/general/icon-line.png')
+
+              &__value
+                font-size: 16px
+                font-weight: 700
+                color: $gray_dark
+
+              &__percentage
+                font-size: 16px
+                font-weight: 700
+                color: $gray_dark
+
+      &__data
+        width: 267px
+        text-align: center
+
+        .data
+
+          &__graph
+            display: none
+
+
