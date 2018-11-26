@@ -1,0 +1,107 @@
+.lk-sidebar
+  width: 300px
+  padding: 34px 10px 55px
+  background-color: $gray_light3
+
+  font-family: 'Akrobat', sans-serif
+
+  &__logo
+    margin-bottom: 11px
+
+    text-align: center
+
+  &__avatar
+    margin-bottom: 9px
+
+    text-align: center
+
+  &__name
+    margin-bottom: 9px
+
+    text-align: center
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 16px
+    line-height: 25px
+
+  &__logout
+    margin-bottom: 15px
+
+    text-align: center
+
+  &__contacts
+    margin-bottom: 35px
+
+  .contacts
+
+    &__item
+      margin-bottom: 6px
+
+      &:last-child
+        margin-bottom: 0
+
+      &_manager
+
+        .contacts__name
+
+          font-weight: 700
+
+    &__name
+      color: $gray_dark2
+      text-transform: uppercase
+      text-align: center
+      font-size: 14px
+      line-height: 23px
+      font-weight: 600
+
+    &__value
+      color: $blue
+      text-transform: uppercase
+      text-align: center
+      font-size: 16px
+      line-height: 24px
+      font-weight: 700
+
+  &__btn
+    margin-bottom: 41px
+
+    text-align: center
+
+
+
+  .links
+
+    &__list
+      padding-left: 92px
+
+    &__item
+      margin-bottom: 27px
+
+      font-size: 16px
+      color: $gray_dark2
+      font-weight: 600
+      text-transform: uppercase
+
+      &:hover
+        color: $blue
+
+      &:last-child
+        margin-bottom: 0
+
+      &_download
+
+        &::after
+          content: ''
+          display: inline-block
+          background-image: url('../img/general/icon-download.png')
+          background-repeat: no-repeat
+          width: 19px
+          height: 19px
+          position: relative
+          top: 3px
+          left: 13px
+
+      &_active
+        color: $blue
+
+
