@@ -6,6 +6,7 @@
   &__sum-date
     display: flex
     justify-content: space-between
+    margin-bottom: 26px
 
   &__sum
     width: calc(50% - 10px)
@@ -60,3 +61,48 @@
       &__day
         font-size: 14px
         line-height: 25px
+
+  &__select-period
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .presets-date
+      display: inline-flex
+      background-color: $gray_light3
+      padding: 29px 20px 27px
+
+    .presets
+      margin-right: 34px
+
+      &__list
+        display: flex
+
+
+      &__item
+        width: 67px
+        margin-right: 2px
+
+        &:last-child
+          margin-right: 0
+
+    .refresh
+
+      .button
+        width: auto
+        background-color: $gray2
+        padding: 0 14px
+
+        &:hover
+          color: $white
+          border-color: $gray2
+
+        i
+          display: inline-block
+          width: 18px
+          height: 18px
+          background-image: url('../img/general/icon-refresh.png')
+          background-repeat: no-repeat
+          position: relative
+          top: 3px
+          margin-right: 13px

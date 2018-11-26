@@ -30,3 +30,38 @@ block content
                 span 21:40:55
             .date__day
                 span Пятница
+
+    .lk__select-period.select-period
+        .select-period__presets-date.presets-date
+            .select-period__presets.presets
+                .presets__list
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Сегодня
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Вчера
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period" checked)
+                            span Неделя
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Месяц
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Квартал
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Год
+            .select-period__date sss
+        .select-period__refresh.refresh
+            a(href='#').button
+                i
+                span Обновить
+
