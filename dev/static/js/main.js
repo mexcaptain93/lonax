@@ -1,3 +1,7 @@
 $(document).ready(function () {
-    svg4everybody({});
+    selects();
 });
+
+function selects() {
+    $('.js-select').niceSelect();
+}

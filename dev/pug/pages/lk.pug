@@ -72,12 +72,12 @@ block content
                 .toggler__list
                     .toggler__item
                         label.radio.radio_diag
-                            input(type='radio' name="period" checked)
+                            input(type='radio' name="diag-graph" checked)
                             span
                                 i
                     .toggler__item
                         label.radio.radio_graph
-                            input(type='radio' name="period")
+                            input(type='radio' name="diag-graph")
                             span
                                 i
         .stat__table-graph
@@ -164,6 +164,189 @@ block content
                     img(src='/static/img/content/diag.png')
                 .data__graph
                     img(src='/static/img/content/graph.png')
+    .lk__orders.orders
+        .orders__top
+            .orders__filter.filter
+                .filter__list
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span Выполнено
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span В обработке
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter" checked)
+                            span В работе
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span Отгружено
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span Отказ
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span Рекламация
+
+            .orders__per-page
+                select.js-select(name='per-page')
+                    option(value='На странице:') На странице:
+                    option(value='10') 10
+                    option(value='20') 20
+        .orders__table.table
+            .table__th
+                .table__label
+                    i.details
+                .table__label
+                    span ID#[br]заказа
+                .table__label
+                    span Дата#[br]заказа
+                .table__label
+                    span Входящий#[br]номер
+                .table__label.table__label_center
+                    span ФИО заказа
+                .table__label.table__label_address
+                    span Адрес
+                .table__label.table__label_center
+                    span Сумма#[br]заказа
+                .table__label.table__label_center
+                    span Статус заказа
+                .table__label
+                    i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_green Принят
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_red Завершён
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_blue Отказ
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_green Принят
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_red Завершён
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_blue Отказ
+                .table__td.table__td_center
+                    a(href='#')
+                        i.delete
+
+
+
 
 
 

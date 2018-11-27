@@ -111,6 +111,7 @@
   &__stat
     background-color: $gray_light3
     padding: 36px 36px 56px
+    margin-bottom: 48px
 
     .stat
 
@@ -303,5 +304,174 @@
 
           &__graph
             display: none
+
+
+
+  .orders
+
+    &__top
+      display: flex
+      justify-content: space-between
+      margin-bottom: 35px
+
+    &__filter
+
+      .filter
+
+        &__list
+          display: flex
+
+        &__item
+          width: 112px
+          margin-right: 2px
+
+          &:last-child
+            margin-right: 0
+
+    &__per-page
+      position: relative
+      top: -5px
+
+    .radio
+
+      input
+        &:checked + span
+          background-color: $blue
+
+      span
+        background-color: $gray_light3
+
+
+
+    &__table
+      display: table
+      width: 100%
+
+      .table
+
+        &__th
+          display: table-row
+
+        &__label
+          position: relative
+          display: table-cell
+          vertical-align: middle
+          padding: 8px 15px 7px
+          border-top: 1px solid $gray_light
+          border-bottom: 1px solid $gray_light
+
+          text-transform: uppercase
+          font-size: 14px
+          font-weight: 800
+          color: $gray_dark
+
+          &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 6px
+            bottom: 6px
+            right: 0
+            width: 1px
+            background-color: $gray_light
+
+          &:first-child
+            padding: 8px 6px 6px 7px
+
+          &:last-child
+
+            &::after
+              display: none
+
+          &_address
+            width: 310px
+
+          &_center
+            text-align: center
+
+          i.delete
+            background-image: url('../img/general/icon-order-delete-bold.png')
+
+
+
+        &__tr
+          display: table-row
+
+        &__td
+          position: relative
+          display: table-cell
+          vertical-align: middle
+          padding: 13px 9px 11px
+          border-bottom: 1px solid $gray_light
+
+          font-size: 14px
+          font-weight: 700
+          color: $gray_dark
+
+          &::after
+            content: ''
+            display: block
+            position: absolute
+            top: 6px
+            bottom: 6px
+            right: 0
+            width: 1px
+            background-color: $gray_light
+
+          &:first-child
+            padding-left: 7px
+
+          &:last-child
+            padding-left: 15px
+
+            &::after
+              display: none
+
+          &_center
+            text-align: center
+
+          i
+
+            &.delete
+
+              &:hover
+                background-image: url('../img/general/icon-order-delete-hover.png')
+
+            &.details
+
+              &:hover
+                background-image: url('../img/general/icon-order-details-hover.png')
+
+        &__status
+          display: inline-block
+          width: 96px
+          padding: 5px 0 4px
+
+          &_green
+            background-color: $green
+            color: $white
+
+          &_blue
+            background-color: $blue
+            color: $white
+
+          &_red
+            background-color: $red
+            color: $white
+      i
+
+        &.details
+          display: block
+          width: 13px
+          height: 13px
+          background-image: url('../img/general/icon-order-details.png')
+          background-repeat: no-repeat
+
+        &.delete
+          display: block
+          width: 10px
+          height: 10px
+          background-image: url('../img/general/icon-order-delete.png')
+          background-repeat: no-repeat
 
 
