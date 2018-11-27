@@ -117,7 +117,7 @@
       &__heading-toggler
         display: flex
         justify-content: space-between
-        margin-bottom: 35px
+        margin-bottom: 22px
 
       &__heading
         font-size: 20px
@@ -126,8 +126,62 @@
         text-transform: uppercase
         font-weight: 700
 
+
       &__toggler
-        display: none
+        position: relative
+        top: -4px
+        left: 5px
+
+        .toggler
+
+          &__list
+            display: flex
+
+          &__item
+            margin-right: 2px
+
+            &:last-child
+              margin-right: 0
+
+            .radio
+
+            span
+              display: flex
+              align-items: center
+              justify-content: center
+              width: 34px
+              height: 34px
+
+              &_diag
+
+                i
+                  display: block
+                  background-image: url('../img/general/icon-diag.png')
+                  width: 17px
+                  height: 17px
+                  background-repeat: no-repeat
+
+                input:checked + span i
+                  background-image: url('../img/general/icon-diag-active.png')
+
+
+              &_graph
+
+                i
+                  display: block
+                  background-image: url('../img/general/icon-graph.png')
+                  width: 17px
+                  height: 17px
+                  background-repeat: no-repeat
+
+                input:checked + span i
+                  background-image: url('../img/general/icon-graph-active.png')
+
+
+
+
+
+
 
       &__table-graph
         display: flex

@@ -71,13 +71,15 @@ block content
             .stat__toggler.toggler
                 .toggler__list
                     .toggler__item
-                        label.radio
-                            input(type='radio' name="period")
-                            span a
+                        label.radio.radio_diag
+                            input(type='radio' name="period" checked)
+                            span
+                                i
                     .toggler__item
-                        label.radio
+                        label.radio.radio_graph
                             input(type='radio' name="period")
-                            span b
+                            span
+                                i
         .stat__table-graph
             .stat__table.table
                 .table__th
