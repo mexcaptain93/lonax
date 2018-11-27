@@ -332,6 +332,9 @@
       position: relative
       top: -5px
 
+      .nice-select
+        width: 118px
+
     .radio
 
       input
@@ -346,6 +349,7 @@
     &__table
       display: table
       width: 100%
+      margin-bottom: 48px
 
       .table
 
@@ -474,4 +478,27 @@
           background-image: url('../img/general/icon-order-delete.png')
           background-repeat: no-repeat
 
+    &__pagination
 
+      .pagination-more
+        width: 307px
+        margin: 0 auto
+        padding-top: 25px
+        padding-bottom: 25px
+        margin-bottom: 44px
+
+        &::before
+          font-size: 50px
+
+        &::after
+          font-size: 50px
+
+      .pagination-box
+
+        .pages
+
+          margin: 0 7px
+
+          .active
+            color: $blue
+            border-bottom: transparent

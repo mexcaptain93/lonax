@@ -1,0 +1,149 @@
+.main .pagination {
+    margin:  10px 0 0;
+    display: inline-block;
+    vertical-align:  top;
+    width: 100%;
+    text-align: center;
+}
+
+.main .pagination .pagination-box {
+    text-align:  center;
+    font-size: 18px;
+    line-height:  1;
+    margin: 0 0 40px;
+}
+
+.main .pagination .pagination-box .prev, .main .pagination .pagination-box .next {
+    display:  inline-block;
+    vertical-align:  middle;
+    text-transform:  uppercase;
+    color: #555555;
+    border-bottom: 1px solid #8b8b8b;
+    cursor:  pointer;
+    transition: .3s all;
+}
+
+.main .pagination .pagination-box .pages {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+
+.main .pagination .pagination-box .pages ul li {
+    display:  inline-block;
+    vertical-align:  middle;
+    margin: 0 8px;
+}
+
+.main .pagination .pagination-box .pages ul li a {
+    line-height: 1;
+    color: #555555;
+    border-bottom: 1px solid #8b8b8b;
+    transition: .3s all;
+}
+
+.main .pagination .pagination-box .prev:hover, .main .pagination .pagination-box .next:hover {
+    color: #04a7e0;
+    border-color:  transparent;
+}
+
+.main .pagination .pagination-box .pages ul li a:hover {
+    color: #04a7e0;
+    border-color:  transparent;
+}
+
+.main .pagination .pagination-more {
+    background: #f6f6f6;
+    text-align:  center;
+    text-transform:  uppercase;
+    padding: 18px 32px;
+    position:  relative;
+    cursor:  pointer;
+    transition: .3s all;
+    outline: 3px solid transparent;
+}
+
+.main .pagination .pagination-more:hover {
+    outline: 3px solid #dadada;
+}
+
+.main .pagination .pagination-more.small {
+    display: inline-block;
+    vertical-align: top;
+    padding: 18px 80px;
+    margin: 0 0 30px;
+}
+
+.main .pagination .pagination-more .show {
+    font-weight:  bold;
+    color: #555555;
+    font-size:  18px;
+    line-height:  1;
+}
+
+.main .pagination .pagination-more .show span {
+    display:  block;
+    margin: 5px 0 0;
+    color: #9c9c9c;
+}
+
+.main .pagination .pagination-more:before, .main .pagination .pagination-more:after {
+    position:  absolute;
+    font: normal normal normal 40px/1 FontAwesome;
+}
+
+.main .pagination .pagination-more.small:before, .main .pagination .pagination-more.small:after {
+    font-size: 30px;
+}
+
+.main .pagination .pagination-more:before {
+    content: '\f103';
+    left: 32px;
+    top: 51%;
+    transform: translateY(-50%);
+    color: #bababa;
+}
+
+.main .pagination .pagination-more:after {
+    content: '\f103';
+    right: 32px;
+    top: 51%;
+    transform: translateY(-50%);
+    color: #bababa;
+}
+
+.main .pagination .btn {
+    margin:  0 auto;
+    text-align:  center;
+}
+
+.main .pagination .btn a {
+    display:  block;
+    width:  170px;
+    text-align:  center;
+    height: 44px;
+    line-height: 42px;
+    border: 1px solid #04a7e0;
+    color: #04a7e0;
+    text-transform:  uppercase;
+    margin:  0 auto;
+    font-weight:  bold;
+    font-size: 16px;
+    transition: .3s all;
+}
+
+.main .pagination .btn.gray a {
+    border: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    color: #444;
+}
+
+.main .pagination .btn a:hover {
+    background: #04a7e0;
+    color: #FFF;
+}
+
+.main .pagination .btn.gray a:hover {
+    background: #444;
+    border: 1px solid #444;
+}
