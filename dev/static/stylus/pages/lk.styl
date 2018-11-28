@@ -805,6 +805,7 @@
   &__analytics-refresh
     display: flex
     justify-content: space-between
+    align-items: center
     margin-bottom: 29px
 
     .analytics
@@ -878,6 +879,130 @@
 
       input:checked + span::after
         left: 17px
+
+
+  &__select-type
+    margin-bottom: 28px
+
+    .type
+
+      &__list
+        display: flex
+
+      &__item
+        width: 112px
+        margin-right: 2px
+
+        &:last-child
+          margin-right: 0
+
+
+        .radio
+          input
+            &:checked + span
+              background-color: $blue
+
+          span
+            background-color: $gray_light3
+
+
+  &__graph
+    margin-bottom: 28px
+    
+  &__legend
+    padding: 28px 35px
+    margin-bottom: 28px
+    background-color: $gray_light3
+
+    .legend
+
+      &__list
+        display: flex
+        align-items: stretch
+
+      &__item
+        width: 199px
+        min-height: 167px
+
+        display: flex
+        flex-direction: column
+        margin-right: 28px
+        background-color: $white
+
+        &:last-child
+          margin-right: 0
+
+    .line
+
+      &_red
+
+        i
+          background-color: $red
+
+
+      &_green
+
+        i
+          background-color: $green
+
+
+      &_blue
+
+        i
+          background-color: $blue
+
+
+      &_gray
+
+        i
+          background-color: $gray_dark
+
+
+      &__name
+        padding: 14px 13px
+
+        i
+          display: inline-block
+          vertical-align: middle
+          width: 17px
+          height: 17px
+          border-radius: 50%
+          margin-right: 7px
+
+        span
+          vertical-align: middle
+
+          font-size: 14px
+          line-height: 17px
+          text-transform: uppercase
+          font-weight: 700
+          color: $gray_dark2
+
+
+      &__values
+        display: flex
+        justify-content: space-between
+        padding: 0 13px
+
+        font-size: 14px
+        line-height: 17px
+        font-weight: 800
+        color: $gray_dark2
+
+      &__params
+        display: flex
+        justify-content: space-between
+        padding: 0 13px
+
+        font-size: 14px
+        line-height: 17px
+        font-weight: 700
+        color: $gray_dark
+
+      &__img
+        display: flex
+        align-items: flex-end
+        flex-grow: 1
 
   &_graph
 

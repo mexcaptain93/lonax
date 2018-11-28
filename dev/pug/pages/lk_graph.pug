@@ -48,6 +48,76 @@ block content
             a(href='#').button
                 i
                 span Обновить
+    .lk__select-type.type
+        .type__list
+            .type__item
+                label.radio
+                    input(type='radio' name="type")
+                    span Заказы
+            .type__item
+                label.radio
+                    input(type='radio' name="type")
+                    span Отказы
+            .type__item
+                label.radio
+                    input(type='radio' name="type" checked)
+                    span Прибыль
+            .type__item
+                label.radio
+                    input(type='radio' name="type")
+                    span Оборот
+    .lk__graph
+        img(src='/static/img/content/graph-wide.png' alt='')
+    .lk__legend.legend
+        .legend__list
+            .legend__item.line.line_green
+                .line__name
+                    i
+                    span Заказы
+                .line__values
+                    span 75
+                    span 107
+                .line__params
+                    span сегодня
+                    span среднее за день
+                .line__img
+                    img(src='/static/img/content/line-1.png' alt='Заказы')
+            .legend__item.line.line_red
+                .line__name
+                    i
+                    span Отказы
+                .line__values
+                    span 75
+                    span 107
+                .line__params
+                    span сегодня
+                    span среднее за день
+                .line__img
+                    img(src='/static/img/content/line-2.png' alt='Отказы')
+            .legend__item.line.line_blue
+                .line__name
+                    i
+                    span Прибыль
+                .line__values
+                    span 75
+                    span 107
+                .line__params
+                    span сегодня
+                    span среднее за день
+                .line__img
+                    img(src='/static/img/content/line-3.png' alt='Прибыль')
+            .legend__item.line.line_gray
+                .line__name
+                    i
+                    span Оборот
+                .line__values
+                    span 75
+                    span 107
+                .line__params
+                    span сегодня
+                    span среднее за день
+                .line__img
+                    img(src='/static/img/content/line-4.png' alt='Оборот')
     .lk__select-period.select-period
         .select-period__presets-date.presets-date
             .select-period__presets.presets
