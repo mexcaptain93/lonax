@@ -2,15 +2,23 @@ extends ../layout/main
 
 block variables
     - var title = 'Личный кабинет'
-    - var pageClass = 'lk'
+    - var pageClass = 'lk lk_graph'
     - var dealers_sidebar = '1'
 
 block content
 
-    .lk__sum-date
+    .lk__sum-date.lk__sum-date_3
         .lk__sum.sum
             .sum__heading
-                span Общая сумма заказов
+                span Общий оборот дилера
+            .sum__value
+                span 177 500 Р
+            .sum__date
+                span За ноябрь 2018
+
+        .lk__sum.sum
+            .sum__heading
+                span Общий доход дилера
             .sum__value
                 span 177 500 Р
             .sum__date
@@ -24,6 +32,22 @@ block content
             .date__day
                 span Пятница
 
+    .lk__analytics-refresh
+        .lk__analytics.analytics
+            .analytics__heading
+                span Аналитика:
+            .analytics__checkbox
+                span Вкл
+                label.checkbox(for='analytics')
+                    input(type='checkbox' id='analytics')
+                    span
+                span Выкл
+
+
+        .refresh
+            a(href='#').button
+                i
+                span Обновить
     .lk__select-period.select-period
         .select-period__presets-date.presets-date
             .select-period__presets.presets
@@ -125,10 +149,6 @@ block content
                         input.popup__end.js-popup-date-end
                     .popup__btn
                         .button.button_blue.js-popup-date-save Применить
-        .select-period__refresh.refresh
-            a(href='#').button
-                i
-                span Обновить
     .lk__stat.stat
         .stat__heading-toggler
             .stat__heading

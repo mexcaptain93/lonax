@@ -8,6 +8,16 @@
     justify-content: space-between
     margin-bottom: 26px
 
+    &_3
+
+      .lk
+
+        &__sum
+            width: calc(33.3% - 14px)
+
+        &__date
+            width: calc(33.3% - 14px)
+
   &__sum
     width: calc(50% - 10px)
     background-color: $gray_light3
@@ -791,3 +801,85 @@
             display: block
             width: 100%
             margin-bottom: 20px
+
+  &__analytics-refresh
+    display: flex
+    justify-content: space-between
+    margin-bottom: 29px
+
+    .analytics
+      display: flex
+      color: #6a6a6a
+
+      &__heading
+        margin-right: 20px
+
+        font-weight: 700
+        font-size: 20px
+        text-transform: uppercase
+
+      &__checkbox
+        font-size: 16px
+        line-height: 29px
+        font-weight: 700
+
+        .checkbox
+          margin: 0 5px
+
+    .refresh
+
+      .button
+        width: auto
+        background-color: $gray2
+        padding: 0 14px
+        transition: .3s all
+
+
+        &:hover
+          color: $gray2
+          border-color: $gray2
+          background-color: $white
+
+          i
+            background-image: url('../img/general/icon-refresh-hover.png')
+
+
+        i
+          display: inline-block
+          width: 18px
+          height: 18px
+          background-image: url('../img/general/icon-refresh.png')
+          background-repeat: no-repeat
+          position: relative
+          top: 3px
+          margin-right: 13px
+
+
+    .checkbox
+
+      span
+        display: inline-block
+        padding: 0
+        width: 30px
+        height: 14px
+        background-image: url('../img/general/checkbox-bg.png')
+        background-repeat: no-repeat
+
+        &::before
+          display: none
+
+        &::after
+          display: block
+          width: 10px
+          height: 10px
+          left: 3px
+          background: url('../img/general/checkbox-dot.png')
+          background-repeat: no-repeat
+
+      input:checked + span::after
+        left: 17px
+
+  &_graph
+
+    .lk__select-period .presets-date
+      width: 100%
