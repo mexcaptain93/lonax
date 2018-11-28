@@ -1,0 +1,29 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Новый заказ'
+    - var pageClass = 'new-order'
+
+block content
+    .new-order__timers.timers
+        .timers__list
+            .timers__item.timer.timers__item_red
+                .timer__text
+                    span До окончания возможности сделать заказ на сегодня осталось:
+                .timer__time
+                    span 05:40:37
+
+            .timers__item.timer.timers__item_blue
+                .timer__text
+                    span До окончания возможности сделать заказ на завтра на утро осталось:
+                .timer__time
+                    span 24:40:37
+
+            .timers__item.timer.timers__item_green
+                .timer__text
+                    .timer__date
+                        span 8 Ноября 2018
+                    .timer__day
+                        span Пятница
+                .timer__time
+                    span 14:40:37

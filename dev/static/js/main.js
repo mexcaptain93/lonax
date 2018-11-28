@@ -31,31 +31,32 @@ function selectPeriod() {
         range = $('.js-popup-date-range'),
         start = $('.js-popup-date-start'),
         end = $('.js-popup-date-end');
-    range.datepicker({
-        range: 'period', // режим - выбор периода
-        numberOfMonths: 3,
-        monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-        dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-        firstDay: 1,
-        dateFormat: 'dd.mm.yy',
+
+    if (range.length > 0) {
+        range.datepicker({
+            range: 'period', // режим - выбор периода
+            numberOfMonths: 3,
+            monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            firstDay: 1,
+            dateFormat: 'dd.mm.yy',
 
 
-        onSelect: function(dateText, inst, extensionRange) {
-            // extensionRange - объект расширения
-            start.val(extensionRange.startDateText);
-            end.val(extensionRange.endDateText);
+            onSelect: function(dateText, inst, extensionRange) {
+                // extensionRange - объект расширения
+                start.val(extensionRange.startDateText);
+                end.val(extensionRange.endDateText);
 
-        }
-    });
+            }
+        });
 
-    input.datepicker('setDate', ['+4d', '+8d']);
+        input.datepicker('setDate', ['+4d', '+8d']);
 
-    // объект расширения (хранит состояние календаря)
-    var extensionRange = range.datepicker('widget').data('datepickerExtensionRange');
-    if(extensionRange.startDateText) start.val(extensionRange.startDateText);
-    if(extensionRange.endDateText) end.val(extensionRange.endDateText);
-
-
+        // объект расширения (хранит состояние календаря)
+        var extensionRange = range.datepicker('widget').data('datepickerExtensionRange');
+        if(extensionRange.startDateText) start.val(extensionRange.startDateText);
+        if(extensionRange.endDateText) end.val(extensionRange.endDateText);
+    }
 }
 
 function selectDiagGraph() {
