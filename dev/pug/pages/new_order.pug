@@ -191,6 +191,86 @@ block content
                             input(type='radio' id='no-lift' name='lift')
                             span Платный подъём
                 .map
+                    img(src='static/img/content/map.jpg' alt='Map')
+        .add__delivery.delivery
+            .delivery__type
+                label.checkbox(for='delivery-company-1')
+                    input(type='radio' id='delivery-company-1' name='delivery-company' checked)
+                    span Lonax
+                label.checkbox(for='delivery-company-2')
+                    input(type='radio' id='delivery-company-2' name='delivery-company')
+                    span Самовывоз
+                label.checkbox(for='delivery-company-3')
+                    input(type='radio' id='delivery-company-3' name='delivery-company')
+                    span Через ТК
+            .delivery__params
+                .delivery__param.param.param_type
+                    .param__label
+                        span Тип доставки
+                    .param__input
+                        select.js-select(name='delivery-type')
+                            option(value='Утренняя') Утренняя
+                            option(value='Вечерняя') Вечерняя
+                .delivery__param.param.param_time
+                    .param__label
+                        span Время доставки
+                    .param__input
+                        input(type='text' value='18:00')
+                .delivery__param.param.param_payer
+                    .param__label
+                        span Возмещение расходов при доставке
+                    .param__input
+                        select.js-select(name='delivery-payer')
+                            option(value='Оплачивает клиент') Оплачивает клиент
+                            option(value='Оплачивает не клиент') Оплачивает не клиент
+                .delivery__param.param.param_wide
+                    .param__label
+                        span Комментарий к заказу
+                    .param__input
+                        textarea
+        .add__payment.payment
+            .payment__label
+                span Тип оплаты
+            .payment__type
+                label.checkbox(for='payment-type-1')
+                    input(type='radio' id='payment-type-1' name='payment-type' checked)
+                    span Наличными
+                label.checkbox(for='payment-type-2')
+                    input(type='radio' id='payment-type-2' name='payment-type')
+                    span Картой
+        .add__services.services
+            .services__label
+                span Услуги
+            .services__list
+                label.checkbox(for='service-1')
+                    input(type='checkbox' id='service-1' name='services' checked)
+                    span Сборка кровати - стоимость: 1000
+                label.checkbox(for='service-2')
+                    input(type='checkbox' id='service-2' name='services')
+                    span Сборка ортопедического основания - стоимость: 300
+                label.checkbox(for='service-3')
+                    input(type='checkbox' id='service-3' name='services')
+                    span Утилизация старого матраса - стоимость: 300
+        .add__digits.digits
+            .digits__field
+                .field__label
+                    span Доход дилера
+                .field__input
+                    input(type='text' value='12 567 Р')
+            .digits__field
+                .field__label
+                    span Скидка за счёт дилера
+                .field__input
+                    input(type='text' value='1 800 Р')
+            .digits__field
+                .field__label
+                    span Сумма
+                .field__input
+                    input(type='text' value='390 000 Р')
+        .add__btn
+            a(href='#').button Создать заказ
+
+
 
 
 

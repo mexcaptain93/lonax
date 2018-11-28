@@ -184,10 +184,12 @@
 
     &__fields-address
       display: flex
+      margin-bottom: 42px
 
 
     &__fields
       width: 390px
+      margin-right: 28px
 
     .fields
 
@@ -195,7 +197,6 @@
         margin-bottom: 27px
 
       &__item
-        overflow: hidden;
         margin-bottom: 20px;
 
       &__label
@@ -220,6 +221,7 @@
 
         .nice-select
           width: 100%
+          float: none
           padding-left: 10px
           background-color: $white
           border: 1px solid $gray_light
@@ -245,12 +247,12 @@
 
     &__address-map
       flex-grow: 1
-
       align-self: flex-start
+      padding-top: 22px
 
     .address
       padding: 33px 27px 28px
-      margin-left: 28px
+      margin-bottom: 16px
       background-color: $gray_light3
 
       &__heading
@@ -292,6 +294,132 @@
           &:last-child
             margin-bottom: 0
 
-    .map
-      height: 300px
-      background-color: red
+    &__delivery
+
+    .delivery
+
+      &__type
+        margin-bottom: 26px
+
+        .checkbox
+          margin-right: 29px
+
+          &:last-child
+            margin-right: 0
+
+      &__params
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 25px
+
+        .nice-select
+          width: 100%
+          float: none
+          padding-left: 10px
+          background-color: $white
+          border: 1px solid $gray_light
+
+          font-size: 16px
+          color: $gray_dark2
+          font-weight: 700
+          text-transform: none
+
+        .param
+          margin-right: 35px
+
+          &__label
+            margin-bottom: 6px
+
+          &__input
+
+            input
+              width: 100%
+              padding: 11px 10px 10px
+              border: 1px solid $gray_light !important
+
+              font-family: 'Akrobat', sans-serif
+              font-size: 16px
+              font-weight: 700
+              color: $gray_dark
+              text-align: center
+
+          &:last-child
+            margin-right: 0
+
+          &_type
+            width: 169px
+
+          &_time
+            width: 86px
+
+          &_payer
+            width: 222px
+
+          &_wide
+            width: 100%
+            margin-top: 23px
+
+            textarea
+              width: 100%
+              height: 120px
+
+    .payment
+      margin-bottom: 32px
+
+      &__label
+        margin-bottom: 17px
+
+      &__type
+
+        .checkbox
+          display: block
+          margin-bottom: 18px
+
+          &:last-child
+            margin-bottom: 0
+
+    .services
+      margin-bottom: 35px
+
+      &__label
+        margin-bottom: 17px
+
+      &__list
+
+        .checkbox
+          display: block
+          margin-bottom: 18px
+
+          &:last-child
+            margin-bottom: 0
+
+    .digits
+      display: flex
+      margin-bottom: 33px
+
+      &__field
+        margin-right: 28px
+
+        &:last-child
+          margin-right: 0
+
+      .field
+
+        &__label
+          margin-bottom: 6px
+
+        &__input
+          width: 169px
+
+          input
+            width: 100%
+            padding: 11px 10px 10px
+            border: 1px solid $gray_light !important
+
+            font-family: 'Akrobat', sans-serif
+            font-size: 16px
+            font-weight: 700
+            color: $red
+
+
+
