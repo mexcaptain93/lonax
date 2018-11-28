@@ -220,9 +220,22 @@ block content
                     .popup__btn
                         .button.button_blue.js-popup-date-save Применить
     .lk__stat.stat
-        .stat__heading-toggler
+        .stat__heading-date
             .stat__heading
-                span Статистика по статусам заказов
+                span Оборот и прибыль по статусам заказов
+            .stat__date
+                span 14 - 28 декабря
+        .stat__togglers
+            .stat__profit-turnover
+                .profit-turnover__list
+                    .profit-turnover__item
+                        label.radio.radio_diag
+                            input(type='radio' name="profit-turnover" checked value='diag')
+                            span Прибыль
+                    .profit-turnover__item
+                        label.radio.radio_graph
+                            input(type='radio' name="profit-turnover" value='graph')
+                            span Оборот
             .stat__toggler.toggler
                 .toggler__list
                     .toggler__item
@@ -239,9 +252,10 @@ block content
             .stat__table.table
                 .table__th
                     .table__label
-                        span Статусы:
+                        span ТОП-S PK
                     .table__label
-                        span Сумма заказов:
+                        span Прибыль
+                            i.fa.fa-angle-down
                 .table__tr
                     .table__status.status
                         .status__wrap
@@ -319,6 +333,26 @@ block content
                     img(src='static/img/content/diag.png')
                 .data__graph.js-data-graph
                     img(src='static/img/content/graph.png')
+    .lk__dynamic.dynamic
+        .dynamic__top
+            .dynamic__heading
+                span Динамика продаж по категориям
+            .dynamic__date
+                span 14 - 28 декабря
+        .dynamic__legend
+            .legend__list
+                .legend__item.legend__item_green
+                    span Матрасы
+                .legend__item.legend__item_red
+                    span Наматрасники
+                .legend__item.legend__item_blue
+                    span Кровати
+                .legend__item.legend__item_violet
+                    span Основания
+                .legend__item.legend__item_gray
+                    span Аксессуары
+        .dynamic__graph
+            img(src='static/img/content/graph-dynamic.png' alt='Динамика продаж по категориям')
     .lk__orders.orders
         .orders__top
             .orders__filter.filter

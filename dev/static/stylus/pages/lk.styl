@@ -251,9 +251,21 @@
     padding: 36px 36px 56px
     margin-bottom: 48px
 
+    .profit-turnover
+
+      &__list
+        display: flex
+
+      &__item
+        width: 67px
+        margin-right: 2px
+
+        &:last-child
+          margin-right: 0
+
     .stat
 
-      &__heading-toggler
+      &__heading-toggler, &__heading-date
         display: flex
         justify-content: space-between
         margin-bottom: 22px
@@ -265,6 +277,16 @@
         text-transform: uppercase
         font-weight: 700
 
+      &__date
+        font-size: 14px
+        color: $gray_dark2
+        font-weight: 700
+        text-transform: uppercase
+
+      &__togglers
+        display: flex
+        justify-content: space-between
+        margin-bottom: 28px
 
       &__toggler
         position: relative
@@ -316,12 +338,6 @@
                 input:checked + span i
                   background-image: url('../img/general/icon-graph-active.png')
 
-
-
-
-
-
-
       &__table-graph
         display: flex
         justify-content: space-between
@@ -345,6 +361,10 @@
             font-size: 16px
             font-weight: 700
             text-transform: uppercase
+
+            i
+              margin-left: 8px
+
 
           &__status
             display: table-cell
@@ -650,6 +670,7 @@
     transform: translate(-50%, -50%)
     background-color: $white
     padding: 38px 75px
+    box-shadow: 0 0 20px 7px rgba(0,0,0,0.1)
 
     .order-popup
 
@@ -1004,7 +1025,72 @@
         align-items: flex-end
         flex-grow: 1
 
+
+  &__dynamic
+    padding: 28px 35px
+    margin-bottom: 28px
+    background-color: $gray_light3
+
+    .dynamic
+
+      &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 8px
+
+        color: $gray_dark2
+        font-weight: 700
+        text-transform: uppercase
+
+      &__heading
+        font-size: 20px
+        line-height: 20px
+
+      &__date
+        font-size: 14px
+
+      &__legend
+        margin-bottom: 23px
+
+      &__graph
+        margin: 0 -10px
+
+    .legend
+
+
+      &__list
+        display: flex
+
+      &__item
+        margin-right: 19px
+        border-bottom: 2px solid transparent
+
+        font-size: 16px
+        line-height: 37px
+        font-weight: 600
+        color: $gray_dark
+
+        &:last-child
+          margin-right: 0
+
+        &_red
+          border-color: $red
+
+        &_green
+          border-color: $green
+
+        &_gray
+          border-color: $gray
+
+        &_blue
+          border-color: $blue
+
+        &_violet
+          border-color: $violet
+
   &_graph
 
     .lk__select-period .presets-date
       width: 100%
+
