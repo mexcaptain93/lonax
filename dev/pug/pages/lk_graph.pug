@@ -1,0 +1,566 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Личный кабинет'
+    - var pageClass = 'lk'
+    - var dealers_sidebar = '1'
+
+block content
+
+    .lk__sum-date
+        .lk__sum.sum
+            .sum__heading
+                span Общая сумма заказов
+            .sum__value
+                span 177 500 Р
+            .sum__date
+                span За ноябрь 2018
+
+        .lk__date.date
+            .date__date
+                span 8 Ноября 2018
+            .date__time
+                span 21:40:55
+            .date__day
+                span Пятница
+
+    .lk__select-period.select-period
+        .select-period__presets-date.presets-date
+            .select-period__presets.presets
+                .presets__list
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Сегодня
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Вчера
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period" checked)
+                            span Неделя
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Месяц
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Квартал
+                    .presets__item
+                        label.radio
+                            input(type='radio' name="period")
+                            span Год
+            .select-period__date.date
+                .date__icon
+                input.date__input.js-select-date-input(value='28.11.2018 - 29.11.2018' readonly)
+                .date__popup.popup.js-popup-date
+                    .popup__top
+                        .popup__heading
+                            span Выбор периода:
+                        .popup__close.js-popup-date-close
+                            a(href='#')
+                    .popup__period.period
+                        .period__list
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2005 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2006 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2007 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2008 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2009 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2010 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2011 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2012 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2013 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2014 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2015 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2016 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year')
+                                    span 2017 г.
+                            .period__item
+                                label.radio
+                                    input(type='radio' name='year' checked)
+                                    span 2018 г.
+                    .popup__range.js-popup-date-range
+                    .popup__inputs
+                        input.popup__start.js-popup-date-start(type='text')
+                        input.popup__end.js-popup-date-end
+                    .popup__btn
+                        .button.button_blue.js-popup-date-save Применить
+        .select-period__refresh.refresh
+            a(href='#').button
+                i
+                span Обновить
+    .lk__stat.stat
+        .stat__heading-toggler
+            .stat__heading
+                span Статистика по статусам заказов
+            .stat__toggler.toggler
+                .toggler__list
+                    .toggler__item
+                        label.radio.radio_diag
+                            input(type='radio' name="diag-graph" checked value='diag')
+                            span
+                                i
+                    .toggler__item
+                        label.radio.radio_graph
+                            input(type='radio' name="diag-graph" value='graph')
+                            span
+                                i
+        .stat__table-graph
+            .stat__table.table
+                .table__th
+                    .table__label
+                        span Статусы:
+                    .table__label
+                        span Сумма заказов:
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_green
+                            .status__name
+                                span Выполнено
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_blue
+                            .status__name
+                                span В обработке
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_orange
+                            .status__name
+                                span В работе
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_violet
+                            .status__name
+                                span Отгружено
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_red
+                            .status__name
+                                span Отказ
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+                .table__tr
+                    .table__status.status
+                        .status__wrap
+                            .status__color.status__color_gray
+                            .status__name
+                                span Рекламация
+                    .table__sum.sum
+                        .sum__wrap
+                            .sum__value
+                                span 132 890 Р
+                            .sum__percentage
+                                span 40%
+            .stat__data.data
+                .data__diag.js-data-diag
+                    img(src='/static/img/content/diag.png')
+                .data__graph.js-data-graph
+                    img(src='/static/img/content/graph.png')
+    .lk__orders.orders
+        .orders__top
+            .orders__filter.filter
+                .filter__list
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span Выполнено
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span В обработке
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter" checked)
+                            span В работе
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span Отгружено
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span Отказ
+                    .filter__item
+                        label.radio
+                            input(type='radio' name="filter")
+                            span Рекламация
+
+            .orders__per-page
+                select.js-select(name='per-page')
+                    option(value='На странице:') На странице:
+                    option(value='10') 10
+                    option(value='20') 20
+        .orders__table.table
+            .table__th
+                .table__label
+                    i.details
+                .table__label
+                    span ID#[br]заказа
+                .table__label
+                    span Дата#[br]заказа
+                .table__label
+                    span Входящий#[br]номер
+                .table__label.table__label_center
+                    span ФИО заказа
+                .table__label.table__label_address
+                    span Адрес
+                .table__label.table__label_center
+                    span Сумма#[br]заказа
+                .table__label.table__label_center
+                    span Статус заказа
+                .table__label
+                    i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details.js-open-details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_green Принят
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details.js-open-details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_red Завершён
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details.js-open-details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_blue Отказ
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details.js-open-details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_green Принят
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details.js-open-details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_red Завершён
+                .table__td
+                    a(href='#')
+                        i.delete
+            .table__tr
+                .table__td
+                    a(href='#')
+                        i.details.js-open-details
+                .table__td
+                    span 1702
+                .table__td
+                    span 30.10.2018
+                .table__td.table__td_center
+                    span 1122
+                .table__td.table__td_center
+                    span Иванов Иван
+                .table__td
+                    span г Москва, Волгоградский пр-кт, д 2
+                .table__td.table__td_center
+                    span 3959.00
+                .table__td.table__td_center
+                    span.table__status.table__status_blue Отказ
+                .table__td.table__td_center
+                    a(href='#')
+                        i.delete
+        .orders__pagination
+            .pagination
+                .pagination-more
+                    .show Показать еще
+                .pagination-box
+                    .prev В начало
+                    .pages
+                        ul
+                            li
+                                a(href='#') 1
+                            li
+                                a.active(href='#') 2
+                            li
+                                a(href='#') 3
+                            li
+                                a(href='#') 4
+                            li
+                                a(href='#') 5
+                            li
+                                a(href='#') ...
+                            li
+                                a(href='#') 20
+                    .next В конец
+    .lk__order-popup.order-popup.js-order-details
+        .order-popup__top
+            .order-popup__name
+                span Андрей Медведев
+            .order-popup__close.js-order-details-close
+                a(href='#')
+                    span Назад
+        .order-popup__order-num
+            span Заказ № 1701
+        .order-popup__row
+            .order-popup__item.item
+                .item__label
+                    span Товар
+                .item__input.item__input_wide
+                    input(type='text' value='Матрас Vegas Smart Spark Light 160x200')
+        .order-popup__row.order-popup__row_digits
+            .order-popup__item.item
+                .item__label
+                    span Количество
+                .item__input.item__input_quantity
+                    input(type='text' value='7')
+            .order-popup__item.item
+                .item__label
+                    span Ширина
+                .item__input.item__input_width
+                    input(type='text' value='27')
+            .order-popup__item.item
+                .item__label
+                    span Длина
+                .item__input.item__input_length
+                    input(type='text' value='230')
+            .order-popup__item.item
+                .item__label
+                    span Диаметр
+                .item__input.item__input_diameter
+                    input(type='text' value='331')
+            .order-popup__item.item
+                .item__label
+                    span Цена розн.
+                .item__input.item__input_red
+                    input(type='text' value='23 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Сумма розн.
+                .item__input.item__input_red
+                    input(type='text' value='22 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Цена дилера.
+                .item__input.item__input_red
+                    input(type='text' value='13 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Сумма дилера.
+                .item__input.item__input_red
+                    input(type='text' value='54 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Доход дилера.
+                .item__input.item__input_red
+                    input(type='text' value='32 700 Р')
+        .order-popup__address
+            span Адрес доставки
+                span.bold г Москва, Волгоградский пр-кт, д 2
+        .order-popup__row.order-popup__row_block
+            .order-popup__item.item
+                .item__label
+                    span ФИО
+                .item__input
+                    input(type='text' value='Наумов Виктор Егорович')
+            .order-popup__item.item
+                .item__label
+                    span Телефон
+                .item__input
+                    input(type='text' value='8 800 555-35-35')
+            .order-popup__item.item
+                .item__label
+                    span Договор
+                .item__input
+                    input(type='text' value='Договор')
+            .order-popup__item.item
+                .item__label
+                    span Склад отгрузки
+                .item__input
+                    input(type='text' value='Москва')
+            .order-popup__item.item
+                .item__label
+                    span Дата доставки
+                .item__input
+                    input(type='text' value='10.11.2018')
+            .order-popup__item.item
+                .item__label
+                    span Тип доставки
+                .item__input
+                    input(type='text' value='Утренняя')
+            .order-popup__item.item
+                .item__label
+                    span Время доставки
+                .item__input
+                    input(type='text' value='12:45')
+            .order-popup__item.item
+                .item__label
+                    span Возмещение расходов при дост.
+                .item__input
+                    input(type='text' value='Оплачивает клиент')
+            .order-popup__item.item
+                .item__label
+                    span Подъем на этаж
+                .item__input
+                    input(type='text' value='Есть лифт')
+            .order-popup__item.item
+                .item__label
+                    span Тип оплаты
+                .item__input
+                    input(type='text' value='Наличными')
+        .order-popup__row.order-popup__row_services
+            span Услуги
+            .order-popup__item.item
+                .item__label
+                    span Доход дилера
+                .item__input.item__input_red
+                    input(type='text' value='7 500 Р')
+            .order-popup__item.item
+                .item__label
+                    span Аванс
+                .item__input.item__input_red
+                    input(type='text' value='3 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Сумма
+                .item__input.item__input_red
+                    input(type='text' value='27 700 Р')
