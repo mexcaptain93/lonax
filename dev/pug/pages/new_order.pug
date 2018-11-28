@@ -27,3 +27,88 @@ block content
                         span Пятница
                 .timer__time
                     span 14:40:37
+    .new-order__form.form
+        .form__heading
+            span Новый заказ
+        .form__row
+            .form__item.item
+                .item__label
+                    span Категория товара
+                .item__input
+                    select.js-select(name='type')
+                        option(value='Матрацы') Матрацы
+                        option(value='Матрацы') Матрацы
+            .form__item.item
+                .item__label
+                    span Подкатегория товара
+                .item__input
+                    select.js-select(name='type')
+                        option(value='Серия эконом') Серия эконом
+                        option(value='Серия Премиум') Серия Премиум
+            .form__item.item
+                .item__label
+                    span Товар #[a(href='#') ссылка на товар]
+                .item__input.item__input_wide
+                    select.js-select(name='type')
+                        option(value='Матрас Vegas Smart ') Матрас Vegas Smart
+                        option(value='Матрас Vegas Smart ') Матрас Vegas Smart
+            .form__item.item
+                .item__label
+                    span Размер
+                .item__input.item__input_small
+                    select.js-select(name='type')
+                        option(value='120x95') 120x95
+                        option(value='130x105') 130x105
+            .form__item.form__item_checkbox
+                label.checkbox(for='unstandart')
+                    input(type='checkbox' id='unstandart' checked)
+                    span Нестандартный #[br] размер
+        .form__row.form__row_digits
+            .form__item.item
+                .item__label
+                    span Количество
+                .item__input.item__input_quantity
+                    input(type='text' value='7')
+            .form__item.item
+                .item__label
+                    span Ширина
+                .item__input.item__input_width
+                    input(type='text' value='27')
+            .form__item.item
+                .item__label
+                    span Длина
+                .item__input.item__input_length
+                    input(type='text' value='230')
+            .form__item.item
+                .item__label
+                    span Диаметр
+                .item__input.item__input_diameter
+                    input(type='text' value='331')
+            .form__item.item
+                .item__label
+                    span Цена диллера
+                .item__input.item__input_red
+                    input(type='text' value='23 700 Р')
+            .form__item.item
+                .item__label
+                    span Сумма диллера
+                .item__input.item__input_red
+                    input(type='text' value='22 700 Р')
+            .form__item.item
+                .item__label
+                    span Цена розн.
+                .item__input.item__input_red
+                    input(type='text' value='13 700 Р')
+            .form__item.item
+                .item__label
+                    span Сумма розн.
+                .item__input.item__input_red
+                    input(type='text' value='54 700 Р')
+            .form__item.item
+                .item__label
+                    span Доход дилера.
+                .item__input.item__input_red
+                    input(type='text' value='32 700 Р')
+        .form__btns
+            a.button.button_blue(href='#') Копировать
+            a.button.button_gray Удалить

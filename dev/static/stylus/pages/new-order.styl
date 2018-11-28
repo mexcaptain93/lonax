@@ -38,3 +38,134 @@
 
     &__date
       font-size: 18px
+
+  &__form
+    padding: 33px 18px 43px
+    background-color: $gray_light3
+
+  .form
+
+    &__heading
+      padding-bottom: 28px
+      margin-bottom: 28px
+      border-bottom: 1px solid #d7d7d7
+
+      font-size: 27px
+      text-transform: uppercase
+      font-weight: 600
+      color: #555555
+
+    &__row
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 17px
+
+      &_digits
+        padding-bottom: 21px
+        margin-bottom: 10px
+        border-bottom: none
+
+        .item
+
+          &__label
+            margin-bottom: 9px
+
+          &__input
+            margin-right: 17px
+
+            input
+              width: 100%
+              padding: 11px 10px 10px
+              border: 1px solid $gray_light !important
+
+              text-align: center
+              font-family: 'Akrobat', sans-serif
+              font-size: 16px
+              font-weight: 700
+              color: $gray_dark
+
+            &_wide
+              width: 557px
+
+            &_quantity
+              width: 63px
+
+            &_width
+              width: 63px
+
+            &_length
+              width: 63px
+
+            &_diameter
+              width: 63px
+
+            &_red
+
+              input
+                color: $red
+
+
+    &__item
+
+      &_checkbox
+        align-self: flex-end
+        position: relative
+        top: -8px
+
+        span
+          display: block
+
+          font-family: mainFont
+          font-size: 14px
+          font-weight: 700
+          color: $gray_dark2
+
+          &::before
+            top: 4px
+
+          &::after
+            top: 9px
+
+    .item
+
+      &__label
+        margin-bottom: 8px
+
+        font-size: 14px
+        font-weight: 700
+        color: #8e8e8e
+
+        a
+          color: $blue
+          text-decoration: underline
+
+      &__input
+
+        .nice-select
+          width: 169px
+          background-color: $white
+          border: 1px solid #cecece
+
+          color: $gray_dark2
+          font-weight: 700
+          text-transform: none
+
+        &_wide
+
+          .nice-select
+            width: 239px
+
+        &_small
+
+          .nice-select
+            width: 99px
+
+    &__btns
+
+      a:first-child
+        width: 183px
+        margin-right: 15px
+
+      a:nth-child(2)
+        width: 130px
