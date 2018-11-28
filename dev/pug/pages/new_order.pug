@@ -35,28 +35,28 @@ block content
                 .item__label
                     span Категория товара
                 .item__input
-                    select.js-select(name='type')
+                    select.js-select(name='cat')
                         option(value='Матрацы') Матрацы
                         option(value='Матрацы') Матрацы
             .form__item.item
                 .item__label
                     span Подкатегория товара
                 .item__input
-                    select.js-select(name='type')
+                    select.js-select(name='subcat')
                         option(value='Серия эконом') Серия эконом
                         option(value='Серия Премиум') Серия Премиум
             .form__item.item
                 .item__label
                     span Товар #[a(href='#') ссылка на товар]
                 .item__input.item__input_wide
-                    select.js-select(name='type')
+                    select.js-select(name='product')
                         option(value='Матрас Vegas Smart ') Матрас Vegas Smart
                         option(value='Матрас Vegas Smart ') Матрас Vegas Smart
             .form__item.item
                 .item__label
                     span Размер
                 .item__input.item__input_small
-                    select.js-select(name='type')
+                    select.js-select(name='size')
                         option(value='120x95') 120x95
                         option(value='130x105') 130x105
             .form__item.form__item_checkbox
@@ -112,3 +112,89 @@ block content
         .form__btns
             a.button.button_blue(href='#') Копировать
             a.button.button_gray Удалить
+    .new-order__add.add
+        .add__btn
+            a(href='#').button Добавить товар
+        .add__fields-address
+            .add__fields.fields
+                .fields__list
+                    .fields__item
+                        .fields__label
+                            span Склад отгрузки
+                        .fields__input
+                            select.js-select(name='stock')
+                                option(value='Не выбран') Не выбран
+                    .fields__item
+                        .fields__label
+                            span Входящий номер
+                        .fields__input
+                            input(value='Не выбран')
+                    .fields__item
+                        .fields__label
+                            span ФИО заказчика
+                        .fields__input
+                            input(value='Не выбран')
+                    .fields__item
+                        .fields__label
+                            span Телефон 1
+                        .fields__input
+                            input(value='Не выбран')
+                    .fields__item
+                        .fields__label
+                            span Телефон 2
+                        .fields__input
+                            input(value='Не выбран')
+                    .fields__item
+                        .fields__label
+                            span Доставка #[br] Выберите дату доставки
+                        .fields__input
+                            input(value='Не выбран')
+                .fields__res Общее кол-во км за мкад, кад, черту города: #[span 0 км] #[br] Количество бесплатных км: #[span 0 км] #[br] Количество отплачиваемых км: #[span 0 км] #[br]  Стоимость отплачиваемых км: #[span 0 км] #[br]  Стоимость подъема на этаж: #[span 0] #[br]  Стоимость доставки: #[span 0] #[br] Итого за доставку: #[span.red 2 900 Р] #[br]
+            .add__address-map.address-map
+                .address
+                    .address__heading
+                        span Адрес заказчика
+                    .address__row
+                        .address__fields.fields
+                            .fields__item
+                                .fields__label
+                                    span Ввести новый адрес
+                                .fields__input
+                                    input(type='text' value='Москва')
+                    .address__row.address__row_line
+                        .address__fields.fields
+                            .fields__item
+                                .fields__label
+                                    span Подъезд
+                                .fields__input
+                                    input(type='text' value='5')
+                            .fields__item
+                                .fields__label
+                                    span Этаж
+                                .fields__input
+                                    input(type='text' value='27')
+                            .fields__item
+                                .fields__label
+                                    span Домофон
+                                .fields__input
+                                    input(type='text' value='245')
+                            .fields__item
+                                .fields__label
+                                    span Квартира
+                                .fields__input
+                                    input(type='text' value='273')
+                    .address__lift
+                        label.checkbox(for='lift')
+                            input(type='radio' id='lift' name='lift' checked)
+                            span Есть лифт
+                        label.checkbox(for='no-lift')
+                            input(type='radio' id='no-lift' name='lift')
+                            span Платный подъём
+                .map
+
+
+
+
+
+
+

@@ -145,8 +145,9 @@
         .nice-select
           width: 169px
           background-color: $white
-          border: 1px solid #cecece
+          border: 1px solid $gray_light
 
+          font-size: 16px
           color: $gray_dark2
           font-weight: 700
           text-transform: none
@@ -169,3 +170,128 @@
 
       a:nth-child(2)
         width: 130px
+
+  &__add
+    padding: 24px 18px
+
+  .add
+
+    &__btn
+      margin-bottom: 22px
+
+      .button
+        width: 180px
+
+    &__fields-address
+      display: flex
+
+
+    &__fields
+      width: 390px
+
+    .fields
+
+      &__list
+        margin-bottom: 27px
+
+      &__item
+        overflow: hidden;
+        margin-bottom: 20px;
+
+      &__label
+        margin-bottom: 5px
+
+        font-size: 14px
+        font-weight: 700
+        color: #8e8e8e
+
+      &__input
+        width: 100%
+
+        input
+          width: 100%
+          padding: 11px 10px 10px
+          border: 1px solid $gray_light !important
+
+          font-family: 'Akrobat', sans-serif
+          font-size: 16px
+          font-weight: 700
+          color: $gray_dark
+
+        .nice-select
+          width: 100%
+          padding-left: 10px
+          background-color: $white
+          border: 1px solid $gray_light
+
+          font-size: 16px
+          color: $gray_dark2
+          font-weight: 700
+          text-transform: none
+
+
+
+      &__res
+        font-size: 16px
+        line-height: 25px
+        font-weight: 700
+        color: $gray_dark2
+
+        span
+          font-weight: 900
+
+          &.red
+            color: $red
+
+    &__address-map
+      flex-grow: 1
+
+      align-self: flex-start
+
+    .address
+      padding: 33px 27px 28px
+      margin-left: 28px
+      background-color: $gray_light3
+
+      &__heading
+        margin-bottom: 20px
+
+        color: $gray_dark2
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+
+      &__row
+
+        .fields
+
+          &__item
+            width: 390px
+
+
+        &_line
+          margin-bottom: 29px
+
+          .fields
+            display: flex
+
+            &__item
+              width: 62px
+              margin-right: 21px
+              margin-bottom: 0
+
+              input
+                text-align: center
+
+      &__lift
+
+        .checkbox
+          display: block
+          margin-bottom: 17px
+
+          &:last-child
+            margin-bottom: 0
+
+    .map
+      height: 300px
+      background-color: red
