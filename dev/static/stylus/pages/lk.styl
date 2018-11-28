@@ -630,3 +630,164 @@
           .active
             color: $blue
             border-bottom: transparent
+
+  &__order-popup
+    display: none
+    position: fixed
+    width: 953px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: $white
+    padding: 38px 75px
+
+    .order-popup
+
+      &__top
+        display: flex
+        justify-content: space-between
+
+      &__name
+        font-size: 18px
+        line-height: 33px
+        text-transform: uppercase
+        color: $gray_dark
+        font-weight: 700
+
+
+      &__close
+
+        a
+
+          &::after
+            content: ''
+            display: inline-block
+            width: 10px
+            height: 10px
+            background-image: url('../img/general/icon-order-delete-bold.png')
+            background-repeat: no-repeat
+
+          span
+            margin-right: 10px
+
+            color: $gray2
+            font-size: 14px
+            line-height: 33px
+            text-transform: uppercase
+            font-weight: 700
+
+      &__order-num
+        padding-bottom: 21px
+        margin-bottom: 20px
+        border-bottom: 1px solid $gray_light
+
+        font-size: 16px
+        line-height: 22px
+        color: $blue
+        font-weight: 700
+
+      &__address
+        margin-bottom: 20px
+
+        font-size: 14px
+
+        .bold
+          margin-left: 8px
+
+          font-size: 16px
+          color: $gray_dark
+          font-weight: 700
+
+      &__row
+        display: flex
+        margin-bottom: 17px
+
+        &_digits
+          padding-bottom: 21px
+          margin-bottom: 20px
+          border-bottom: 1px solid $gray_light
+
+          .item
+
+            &__input
+              width: 74px
+
+          input
+            text-align: center
+
+
+
+
+        .item
+
+          &__label
+            margin-bottom: 9px
+
+          &__input
+            margin-right: 17px
+
+            input
+              width: 100%
+              padding: 11px 10px 10px
+              border: 1px solid $gray_light !important
+
+
+              font-family: 'Akrobat', sans-serif
+              font-size: 16px
+              font-weight: 700
+              color: $gray_dark
+
+            &_wide
+              width: 557px
+
+            &_quantity
+              width: 63px
+
+            &_width
+              width: 48px
+
+            &_length
+              width: 43px
+
+            &_diameter
+              width: 48px
+
+            &_red
+
+              input
+                color: $red
+
+        &_block
+          flex-wrap: wrap
+          margin-bottom: 20px
+          border-bottom: 1px solid $gray_light
+
+          .item
+            width: 175px
+            margin-right: 32px
+            margin-bottom: 23px
+
+            &__input
+              margin-right: 0
+
+            &:nth-child(4n)
+              margin-right: 0
+
+        &_services
+          flex-wrap: wrap
+
+          .item
+            width: 175px
+            margin-right: 32px
+            margin-bottom: 23px
+
+            &__input
+              margin-right: 0
+
+            &:nth-child(4n)
+              margin-right: 0
+
+          & > span
+            display: block
+            width: 100%
+            margin-bottom: 20px

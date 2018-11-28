@@ -1,6 +1,8 @@
 $(document).ready(function () {
     selects();
     selectPeriod();
+    selectDiagGraph();
+    orderDetails()
 });
 
 function selects() {
@@ -54,4 +56,27 @@ function selectPeriod() {
     if(extensionRange.endDateText) end.val(extensionRange.endDateText);
 
 
+}
+
+function selectDiagGraph() {
+    $('[name="diag-graph"]').on('change', function (e) {
+       if($(this).val() == 'diag') {
+           $('.js-data-diag').show();
+           $('.js-data-graph').hide();
+       } else {
+           $('.js-data-diag').hide();
+           $('.js-data-graph').show();
+       }
+    });
+}
+
+function orderDetails() {
+    $('.js-open-details').on('click', function (e) {
+        e.preventDefault();
+        $('.js-order-details').show();
+    });
+    $('.js-order-details-close').on('click', function (e) {
+        e.preventDefault();
+        $('.js-order-details').hide();
+    });
 }

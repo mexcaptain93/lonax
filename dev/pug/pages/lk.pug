@@ -144,12 +144,12 @@ block content
                 .toggler__list
                     .toggler__item
                         label.radio.radio_diag
-                            input(type='radio' name="diag-graph" checked)
+                            input(type='radio' name="diag-graph" checked value='diag')
                             span
                                 i
                     .toggler__item
                         label.radio.radio_graph
-                            input(type='radio' name="diag-graph")
+                            input(type='radio' name="diag-graph" value='graph')
                             span
                                 i
         .stat__table-graph
@@ -232,9 +232,9 @@ block content
                             .sum__percentage
                                 span 40%
             .stat__data.data
-                .data__diag
+                .data__diag.js-data-diag
                     img(src='/static/img/content/diag.png')
-                .data__graph
+                .data__graph.js-data-graph
                     img(src='/static/img/content/graph.png')
     .lk__orders.orders
         .orders__top
@@ -293,7 +293,7 @@ block content
             .table__tr
                 .table__td
                     a(href='#')
-                        i.details
+                        i.details.js-open-details
                 .table__td
                     span 1702
                 .table__td
@@ -314,7 +314,7 @@ block content
             .table__tr
                 .table__td
                     a(href='#')
-                        i.details
+                        i.details.js-open-details
                 .table__td
                     span 1702
                 .table__td
@@ -335,7 +335,7 @@ block content
             .table__tr
                 .table__td
                     a(href='#')
-                        i.details
+                        i.details.js-open-details
                 .table__td
                     span 1702
                 .table__td
@@ -356,7 +356,7 @@ block content
             .table__tr
                 .table__td
                     a(href='#')
-                        i.details
+                        i.details.js-open-details
                 .table__td
                     span 1702
                 .table__td
@@ -377,7 +377,7 @@ block content
             .table__tr
                 .table__td
                     a(href='#')
-                        i.details
+                        i.details.js-open-details
                 .table__td
                     span 1702
                 .table__td
@@ -398,7 +398,7 @@ block content
             .table__tr
                 .table__td
                     a(href='#')
-                        i.details
+                        i.details.js-open-details
                 .table__td
                     span 1702
                 .table__td
@@ -439,14 +439,135 @@ block content
                             li
                                 a(href='#') 20
                     .next В конец
-
-
-
-
-
-
-
-
-
-
-
+    .lk__order-popup.order-popup.js-order-details
+        .order-popup__top
+            .order-popup__name
+                span Андрей Медведев
+            .order-popup__close.js-order-details-close
+                a(href='#')
+                    span Назад
+        .order-popup__order-num
+            span Заказ № 1701
+        .order-popup__row
+            .order-popup__item.item
+                .item__label
+                    span Товар
+                .item__input.item__input_wide
+                    input(type='text' value='Матрас Vegas Smart Spark Light 160x200')
+        .order-popup__row.order-popup__row_digits
+            .order-popup__item.item
+                .item__label
+                    span Количество
+                .item__input.item__input_quantity
+                    input(type='text' value='7')
+            .order-popup__item.item
+                .item__label
+                    span Ширина
+                .item__input.item__input_width
+                    input(type='text' value='27')
+            .order-popup__item.item
+                .item__label
+                    span Длина
+                .item__input.item__input_length
+                    input(type='text' value='230')
+            .order-popup__item.item
+                .item__label
+                    span Диаметр
+                .item__input.item__input_diameter
+                    input(type='text' value='331')
+            .order-popup__item.item
+                .item__label
+                    span Цена розн.
+                .item__input.item__input_red
+                    input(type='text' value='23 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Сумма розн.
+                .item__input.item__input_red
+                    input(type='text' value='22 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Цена дилера.
+                .item__input.item__input_red
+                    input(type='text' value='13 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Сумма дилера.
+                .item__input.item__input_red
+                    input(type='text' value='54 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Доход дилера.
+                .item__input.item__input_red
+                    input(type='text' value='32 700 Р')
+        .order-popup__address
+            span Адрес доставки
+                span.bold г Москва, Волгоградский пр-кт, д 2
+        .order-popup__row.order-popup__row_block
+            .order-popup__item.item
+                .item__label
+                    span ФИО
+                .item__input
+                    input(type='text' value='Наумов Виктор Егорович')
+            .order-popup__item.item
+                .item__label
+                    span Телефон
+                .item__input
+                    input(type='text' value='8 800 555-35-35')
+            .order-popup__item.item
+                .item__label
+                    span Договор
+                .item__input
+                    input(type='text' value='Договор')
+            .order-popup__item.item
+                .item__label
+                    span Склад отгрузки
+                .item__input
+                    input(type='text' value='Москва')
+            .order-popup__item.item
+                .item__label
+                    span Дата доставки
+                .item__input
+                    input(type='text' value='10.11.2018')
+            .order-popup__item.item
+                .item__label
+                    span Тип доставки
+                .item__input
+                    input(type='text' value='Утренняя')
+            .order-popup__item.item
+                .item__label
+                    span Время доставки
+                .item__input
+                    input(type='text' value='12:45')
+            .order-popup__item.item
+                .item__label
+                    span Возмещение расходов при дост.
+                .item__input
+                    input(type='text' value='Оплачивает клиент')
+            .order-popup__item.item
+                .item__label
+                    span Подъем на этаж
+                .item__input
+                    input(type='text' value='Есть лифт')
+            .order-popup__item.item
+                .item__label
+                    span Тип оплаты
+                .item__input
+                    input(type='text' value='Наличными')
+        .order-popup__row.order-popup__row_services
+            span Услуги
+            .order-popup__item.item
+                .item__label
+                    span Доход дилера
+                .item__input.item__input_red
+                    input(type='text' value='7 500 Р')
+            .order-popup__item.item
+                .item__label
+                    span Аванс
+                .item__input.item__input_red
+                    input(type='text' value='3 700 Р')
+            .order-popup__item.item
+                .item__label
+                    span Сумма
+                .item__input.item__input_red
+                    input(type='text' value='27 700 Р')
