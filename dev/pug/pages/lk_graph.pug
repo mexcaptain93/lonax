@@ -38,8 +38,8 @@ block content
                 span Аналитика:
             .analytics__checkbox
                 span Вкл
-                label.checkbox(for='analytics')
-                    input(type='checkbox' id='analytics')
+                label.checkbox(for='analytics-ch')
+                    input(type='checkbox' id='analytics-ch' class='js-analytics-ch' checked)
                     span
                 span Выкл
 
@@ -48,76 +48,84 @@ block content
             a(href='#').button
                 i
                 span Обновить
-    .lk__select-type.type
-        .type__list
-            .type__item
-                label.radio
-                    input(type='radio' name="type")
-                    span Заказы
-            .type__item
-                label.radio
-                    input(type='radio' name="type")
-                    span Отказы
-            .type__item
-                label.radio
-                    input(type='radio' name="type" checked)
-                    span Прибыль
-            .type__item
-                label.radio
-                    input(type='radio' name="type")
-                    span Оборот
-    .lk__graph
-        img(src='static/img/content/graph-wide.png' alt='')
-    .lk__legend.legend
-        .legend__list
-            .legend__item.line.line_green
-                .line__name
-                    i
-                    span Заказы
-                .line__values
-                    span 75
-                    span 107
-                .line__params
-                    span сегодня
-                    span среднее за день
-                .line__img
-                    img(src='static/img/content/line-1.png' alt='Заказы')
-            .legend__item.line.line_red
-                .line__name
-                    i
-                    span Отказы
-                .line__values
-                    span 75
-                    span 107
-                .line__params
-                    span сегодня
-                    span среднее за день
-                .line__img
-                    img(src='static/img/content/line-2.png' alt='Отказы')
-            .legend__item.line.line_blue
-                .line__name
-                    i
-                    span Прибыль
-                .line__values
-                    span 75
-                    span 107
-                .line__params
-                    span сегодня
-                    span среднее за день
-                .line__img
-                    img(src='static/img/content/line-3.png' alt='Прибыль')
-            .legend__item.line.line_gray
-                .line__name
-                    i
-                    span Оборот
-                .line__values
-                    span 75
-                    span 107
-                .line__params
-                    span сегодня
-                    span среднее за день
-                .line__img
-                    img(src='static/img/content/line-4.png' alt='Оборот')
+    .lk__analytics-data.js-analytics-data
+        .lk__select-type.type
+            .type__list.js-analytics-graph
+                .type__item
+                    label.radio
+                        input(type='radio' name="analytics-type" value='type-1')
+                        span Заказы
+                .type__item
+                    label.radio
+                        input(type='radio' name="analytics-type" checked value='type-2')
+                        span Отказы
+                .type__item
+                    label.radio
+                        input(type='radio' name="analytics-type" value='type-3')
+                        span Прибыль
+                .type__item
+                    label.radio
+                        input(type='radio' name="analytics-type" value='type-4')
+                        span Оборот
+        .lk__graph.graph.js-analytics-graphs
+            .graph__item(data-type='type-1')
+                img(src='static/img/content/graph-wide-1.png' alt='')
+            .graph__item(data-type='type-2')
+                img(src='static/img/content/graph-wide.png' alt='')
+            .graph__item(data-type='type-3')
+                img(src='static/img/content/graph-wide-1.png' alt='')
+            .graph__item(data-type='type-4')
+                img(src='static/img/content/graph-wide.png' alt='')
+        .lk__legend.legend
+            .legend__list
+                .legend__item.line.line_green
+                    .line__name
+                        i
+                        span Заказы
+                    .line__values
+                        span 75
+                        span 107
+                    .line__params
+                        span сегодня
+                        span среднее за день
+                    .line__img
+                        img(src='static/img/content/line-1.png' alt='Заказы')
+                .legend__item.line.line_red
+                    .line__name
+                        i
+                        span Отказы
+                    .line__values
+                        span 75
+                        span 107
+                    .line__params
+                        span сегодня
+                        span среднее за день
+                    .line__img
+                        img(src='static/img/content/line-2.png' alt='Отказы')
+                .legend__item.line.line_blue
+                    .line__name
+                        i
+                        span Прибыль
+                    .line__values
+                        span 75
+                        span 107
+                    .line__params
+                        span сегодня
+                        span среднее за день
+                    .line__img
+                        img(src='static/img/content/line-3.png' alt='Прибыль')
+                .legend__item.line.line_gray
+                    .line__name
+                        i
+                        span Оборот
+                    .line__values
+                        span 75
+                        span 107
+                    .line__params
+                        span сегодня
+                        span среднее за день
+                    .line__img
+                        img(src='static/img/content/line-4.png' alt='Оборот')
     .lk__select-period.select-period
         .select-period__presets-date.presets-date
             .select-period__presets.presets
@@ -227,14 +235,14 @@ block content
                 span 14 - 28 декабря
         .stat__togglers
             .stat__profit-turnover
-                .profit-turnover__list
+                .profit-turnover__list.js-profit-turnover
                     .profit-turnover__item
                         label.radio.radio_diag
-                            input(type='radio' name="profit-turnover" checked value='diag')
+                            input(type='radio' name="profit-turnover" checked value='profit')
                             span Прибыль
                     .profit-turnover__item
                         label.radio.radio_graph
-                            input(type='radio' name="profit-turnover" value='graph')
+                            input(type='radio' name="profit-turnover" value='turnover')
                             span Оборот
             .stat__toggler.toggler
                 .toggler__list
@@ -248,86 +256,168 @@ block content
                             input(type='radio' name="diag-graph" value='graph')
                             span
                                 i
-        .stat__table-graph
-            .stat__table.table
-                .table__th
-                    .table__label
-                        span ТОП-S PK
-                    .table__label
-                        span Прибыль
-                            i.fa.fa-angle-down
-                .table__tr
-                    .table__status.status
-                        .status__wrap
-                            .status__color.status__color_green
-                            .status__name
-                                span Выполнено
-                    .table__sum.sum
-                        .sum__wrap
-                            .sum__value
-                                span 132 890 Р
-                            .sum__percentage
-                                span 40%
-                .table__tr
-                    .table__status.status
-                        .status__wrap
-                            .status__color.status__color_blue
-                            .status__name
-                                span В обработке
-                    .table__sum.sum
-                        .sum__wrap
-                            .sum__value
-                                span 132 890 Р
-                            .sum__percentage
-                                span 40%
-                .table__tr
-                    .table__status.status
-                        .status__wrap
-                            .status__color.status__color_orange
-                            .status__name
-                                span В работе
-                    .table__sum.sum
-                        .sum__wrap
-                            .sum__value
-                                span 132 890 Р
-                            .sum__percentage
-                                span 40%
-                .table__tr
-                    .table__status.status
-                        .status__wrap
-                            .status__color.status__color_violet
-                            .status__name
-                                span Отгружено
-                    .table__sum.sum
-                        .sum__wrap
-                            .sum__value
-                                span 132 890 Р
-                            .sum__percentage
-                                span 40%
-                .table__tr
-                    .table__status.status
-                        .status__wrap
-                            .status__color.status__color_red
-                            .status__name
-                                span Отказ
-                    .table__sum.sum
-                        .sum__wrap
-                            .sum__value
-                                span 132 890 Р
-                            .sum__percentage
-                                span 40%
-                .table__tr
-                    .table__status.status
-                        .status__wrap
-                            .status__color.status__color_gray
-                            .status__name
-                                span Рекламация
-                    .table__sum.sum
-                        .sum__wrap
-                            .sum__value
-                                span 132 890 Р
-                            .sum__percentage
-                                span 40%
+        .stat__table-graph.js-profit-turnover-data
+            .stat__tables
+                .table__item(data-type='profit')
+                    .stat__table.table
+                        .table__th
+                            .table__label
+                                span ТОП-S PK 12
+                            .table__label
+                                span Прибыль 12
+                                    i.fa.fa-angle-down
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_green
+                                    .status__name
+                                        span Выполнено
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_blue
+                                    .status__name
+                                        span В обработке
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_orange
+                                    .status__name
+                                        span В работе
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_violet
+                                    .status__name
+                                        span Отгружено
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_red
+                                    .status__name
+                                        span Отказ
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_gray
+                                    .status__name
+                                        span Рекламация
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                .table__item(data-type='turnover')
+                    .stat__table.table
+                        .table__th
+                            .table__label
+                                span ТОП-S PK 1
+                            .table__label
+                                span Прибыль 1
+                                    i.fa.fa-angle-down
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_green
+                                    .status__name
+                                        span Выполнено
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_blue
+                                    .status__name
+                                        span В обработке
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_orange
+                                    .status__name
+                                        span В работе
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_violet
+                                    .status__name
+                                        span Отгружено
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_red
+                                    .status__name
+                                        span Отказ
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
+                        .table__tr
+                            .table__status.status
+                                .status__wrap
+                                    .status__color.status__color_gray
+                                    .status__name
+                                        span Рекламация
+                            .table__sum.sum
+                                .sum__wrap
+                                    .sum__value
+                                        span 132 890 Р
+                                    .sum__percentage
+                                        span 40%
             .stat__data.data
                 .data__diag.js-data-diag
                     img(src='static/img/content/diag.png')
@@ -356,30 +446,30 @@ block content
     .lk__orders.orders
         .orders__top
             .orders__filter.filter
-                .filter__list
+                .filter__list.js-orders-radio
                     .filter__item
                         label.radio
-                            input(type='radio' name="filter")
+                            input(type='radio' name="filter" value='type-1')
                             span Выполнено
                     .filter__item
                         label.radio
-                            input(type='radio' name="filter")
+                            input(type='radio' name="filter" value='type-2')
                             span В обработке
                     .filter__item
                         label.radio
-                            input(type='radio' name="filter" checked)
+                            input(type='radio' name="filter" checked value='type-3')
                             span В работе
                     .filter__item
                         label.radio
-                            input(type='radio' name="filter")
+                            input(type='radio' name="filter" value='type-4')
                             span Отгружено
                     .filter__item
                         label.radio
-                            input(type='radio' name="filter")
+                            input(type='radio' name="filter" value='type-5')
                             span Отказ
                     .filter__item
                         label.radio
-                            input(type='radio' name="filter")
+                            input(type='radio' name="filter" value='type-6')
                             span Рекламация
 
             .orders__per-page
@@ -387,152 +477,637 @@ block content
                     option(value='На странице:') На странице:
                     option(value='10') 10
                     option(value='20') 20
-        .orders__table.table
-            .table__th
-                .table__label
-                    i.details
-                .table__label
-                    span ID#[br]заказа
-                .table__label
-                    span Дата#[br]заказа
-                .table__label
-                    span Входящий#[br]номер
-                .table__label.table__label_center
-                    span ФИО заказа
-                .table__label.table__label_address
-                    span Адрес
-                .table__label.table__label_center
-                    span Сумма#[br]заказа
-                .table__label.table__label_center
-                    span Статус заказа
-                .table__label
-                    i.delete
-            .table__tr
-                .table__td
-                    a(href='#')
-                        i.details.js-open-details
-                .table__td
-                    span 1702
-                .table__td
-                    span 30.10.2018
-                .table__td.table__td_center
-                    span 1122
-                .table__td.table__td_center
-                    span Иванов Иван
-                .table__td
-                    span г Москва, Волгоградский пр-кт, д 2
-                .table__td.table__td_center
-                    span 3959.00
-                .table__td.table__td_center
-                    span.table__status.table__status_green Принят
-                .table__td
-                    a(href='#')
-                        i.delete
-            .table__tr
-                .table__td
-                    a(href='#')
-                        i.details.js-open-details
-                .table__td
-                    span 1702
-                .table__td
-                    span 30.10.2018
-                .table__td.table__td_center
-                    span 1122
-                .table__td.table__td_center
-                    span Иванов Иван
-                .table__td
-                    span г Москва, Волгоградский пр-кт, д 2
-                .table__td.table__td_center
-                    span 3959.00
-                .table__td.table__td_center
-                    span.table__status.table__status_red Завершён
-                .table__td
-                    a(href='#')
-                        i.delete
-            .table__tr
-                .table__td
-                    a(href='#')
-                        i.details.js-open-details
-                .table__td
-                    span 1702
-                .table__td
-                    span 30.10.2018
-                .table__td.table__td_center
-                    span 1122
-                .table__td.table__td_center
-                    span Иванов Иван
-                .table__td
-                    span г Москва, Волгоградский пр-кт, д 2
-                .table__td.table__td_center
-                    span 3959.00
-                .table__td.table__td_center
-                    span.table__status.table__status_blue Отказ
-                .table__td
-                    a(href='#')
-                        i.delete
-            .table__tr
-                .table__td
-                    a(href='#')
-                        i.details.js-open-details
-                .table__td
-                    span 1702
-                .table__td
-                    span 30.10.2018
-                .table__td.table__td_center
-                    span 1122
-                .table__td.table__td_center
-                    span Иванов Иван
-                .table__td
-                    span г Москва, Волгоградский пр-кт, д 2
-                .table__td.table__td_center
-                    span 3959.00
-                .table__td.table__td_center
-                    span.table__status.table__status_green Принят
-                .table__td
-                    a(href='#')
-                        i.delete
-            .table__tr
-                .table__td
-                    a(href='#')
-                        i.details.js-open-details
-                .table__td
-                    span 1702
-                .table__td
-                    span 30.10.2018
-                .table__td.table__td_center
-                    span 1122
-                .table__td.table__td_center
-                    span Иванов Иван
-                .table__td
-                    span г Москва, Волгоградский пр-кт, д 2
-                .table__td.table__td_center
-                    span 3959.00
-                .table__td.table__td_center
-                    span.table__status.table__status_red Завершён
-                .table__td
-                    a(href='#')
-                        i.delete
-            .table__tr
-                .table__td
-                    a(href='#')
-                        i.details.js-open-details
-                .table__td
-                    span 1702
-                .table__td
-                    span 30.10.2018
-                .table__td.table__td_center
-                    span 1122
-                .table__td.table__td_center
-                    span Иванов Иван
-                .table__td
-                    span г Москва, Волгоградский пр-кт, д 2
-                .table__td.table__td_center
-                    span 3959.00
-                .table__td.table__td_center
-                    span.table__status.table__status_blue Отказ
-                .table__td.table__td_center
-                    a(href='#')
-                        i.delete
+        .orders__tables.js-orders-tables
+            .table__item(data-type='type-1')
+                .orders__table.table
+                    .table__th
+                        .table__label
+                            i.details
+                        .table__label
+                            span ID#[br]заказа
+                        .table__label
+                            span Дата#[br]заказа
+                        .table__label
+                            span Входящий#[br]номер
+                        .table__label.table__label_center
+                            span ФИО заказа
+                        .table__label.table__label_address
+                            span Адрес
+                        .table__label.table__label_center
+                            span Сумма#[br]заказа
+                        .table__label.table__label_center
+                            span Статус заказа
+                        .table__label
+                            i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_green Принят
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_red Завершён
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_blue Отказ
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_green Принят
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_red Завершён
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_blue Отказ
+                        .table__td.table__td_center
+                            a(href='#')
+                                i.delete
+            .table__item(data-type='type-2')
+                .orders__table.table
+                    .table__th
+                        .table__label
+                            i.details
+                        .table__label
+                            span ID#[br]заказа
+                        .table__label
+                            span Дата#[br]заказа
+                        .table__label
+                            span Входящий#[br]номер
+                        .table__label.table__label_center
+                            span ФИО заказа
+                        .table__label.table__label_address
+                            span Адрес
+                        .table__label.table__label_center
+                            span Сумма#[br]заказа
+                        .table__label.table__label_center
+                            span Статус заказа
+                        .table__label
+                            i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_green Принят
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_red Завершён
+                        .table__td
+                            a(href='#')
+                                i.delete
+            .table__item(data-type='type-3')
+                .orders__table.table
+                    .table__th
+                        .table__label
+                            i.details
+                        .table__label
+                            span ID#[br]заказа
+                        .table__label
+                            span Дата#[br]заказа
+                        .table__label
+                            span Входящий#[br]номер
+                        .table__label.table__label_center
+                            span ФИО заказа
+                        .table__label.table__label_address
+                            span Адрес
+                        .table__label.table__label_center
+                            span Сумма#[br]заказа
+                        .table__label.table__label_center
+                            span Статус заказа
+                        .table__label
+                            i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_green Принят
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_red Завершён
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_blue Отказ
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_green Принят
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_red Завершён
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_blue Отказ
+                        .table__td.table__td_center
+                            a(href='#')
+                                i.delete
+            .table__item(data-type='type-4')
+                .orders__table.table
+                    .table__th
+                        .table__label
+                            i.details
+                        .table__label
+                            span ID#[br]заказа
+                        .table__label
+                            span Дата#[br]заказа
+                        .table__label
+                            span Входящий#[br]номер
+                        .table__label.table__label_center
+                            span ФИО заказа
+                        .table__label.table__label_address
+                            span Адрес
+                        .table__label.table__label_center
+                            span Сумма#[br]заказа
+                        .table__label.table__label_center
+                            span Статус заказа
+                        .table__label
+                            i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_green Принят
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_red Завершён
+                        .table__td
+                            a(href='#')
+                                i.delete
+            .table__item(data-type='type-5')
+                .orders__table.table
+                    .table__th
+                        .table__label
+                            i.details
+                        .table__label
+                            span ID#[br]заказа
+                        .table__label
+                            span Дата#[br]заказа
+                        .table__label
+                            span Входящий#[br]номер
+                        .table__label.table__label_center
+                            span ФИО заказа
+                        .table__label.table__label_address
+                            span Адрес
+                        .table__label.table__label_center
+                            span Сумма#[br]заказа
+                        .table__label.table__label_center
+                            span Статус заказа
+                        .table__label
+                            i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_green Принят
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_red Завершён
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_blue Отказ
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_green Принят
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_red Завершён
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_blue Отказ
+                        .table__td.table__td_center
+                            a(href='#')
+                                i.delete
+            .table__item(data-type='type-6')
+                .orders__table.table
+                    .table__th
+                        .table__label
+                            i.details
+                        .table__label
+                            span ID#[br]заказа
+                        .table__label
+                            span Дата#[br]заказа
+                        .table__label
+                            span Входящий#[br]номер
+                        .table__label.table__label_center
+                            span ФИО заказа
+                        .table__label.table__label_address
+                            span Адрес
+                        .table__label.table__label_center
+                            span Сумма#[br]заказа
+                        .table__label.table__label_center
+                            span Статус заказа
+                        .table__label
+                            i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_green Принят
+                        .table__td
+                            a(href='#')
+                                i.delete
+                    .table__tr
+                        .table__td
+                            a(href='#')
+                                i.details.js-open-details
+                        .table__td
+                            span 1702
+                        .table__td
+                            span 30.10.2018
+                        .table__td.table__td_center
+                            span 1122
+                        .table__td.table__td_center
+                            span Иванов Иван
+                        .table__td
+                            span г Москва, Волгоградский пр-кт, д 2
+                        .table__td.table__td_center
+                            span 3959.00
+                        .table__td.table__td_center
+                            span.table__status.table__status_red Завершён
+                        .table__td
+                            a(href='#')
+                                i.delete
         .orders__pagination
             .pagination
                 .pagination-more

@@ -2,7 +2,8 @@ $(document).ready(function () {
     selects();
     selectPeriod();
     selectDiagGraph();
-    orderDetails()
+    orderDetails();
+    toggleContent();
 });
 
 function selects() {
@@ -80,4 +81,50 @@ function orderDetails() {
         e.preventDefault();
         $('.js-order-details').hide();
     });
+}
+
+function toggleContent() {
+
+    /* Аналитика */
+    var analytics_ch = $('.js-analytics-ch'),
+        analytics_data = $('.js-analytics-data');
+
+    if (analytics_ch.length > 0) {
+        analytics_ch.on('change', function () {
+            analytics_data.toggle();
+        });
+    }
+
+    /* Табы */
+
+    var graphs_container = $('.js-analytics-graphs');
+
+    graphs_container.find('[data-type='+ $('.js-analytics-graph input:checked').val() + ']').show();
+
+    $('.js-analytics-graph input').on('change', function () {
+        graphs_container.find('[data-type]').hide();
+        graphs_container.find('[data-type='+ $('.js-analytics-graph input:checked').val() + ']').show();
+    });
+
+    var profit_turnover = $('.js-profit-turnover-data');
+
+    profit_turnover.find('[data-type='+ $('.js-profit-turnover input:checked').val() + ']').show();
+
+    $('.js-profit-turnover input').on('change', function () {
+        profit_turnover.find('[data-type]').hide();
+        profit_turnover.find('[data-type='+ $('.js-profit-turnover input:checked').val() + ']').show();
+    });
+
+
+    var tables = $('.js-orders-tables');
+
+    tables.find('[data-type='+ $('.js-orders-radio input:checked').val() + ']').show();
+
+    $('.js-orders-radio input').on('change', function () {
+        tables.find('[data-type]').hide();
+        tables.find('[data-type='+ $('.js-orders-radio input:checked').val() + ']').show();
+    });
+
+
+
 }

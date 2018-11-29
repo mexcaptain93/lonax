@@ -344,9 +344,14 @@
         display: flex
         justify-content: space-between
 
+        .table__item
+          display: none
+
       &__table
         display: table
         width: 555px
+
+
 
         .table
 
@@ -468,6 +473,9 @@
 
 
   .orders
+
+    .table__item
+      display: none
 
     &__top
       display: flex
@@ -896,12 +904,12 @@
           display: block
           width: 10px
           height: 10px
-          left: 3px
+          left: 17px
           background: url('../img/general/checkbox-dot.png')
           background-repeat: no-repeat
 
       input:checked + span::after
-        left: 17px
+        left: 3px
 
 
   &__select-type
@@ -931,6 +939,9 @@
 
   &__graph
     margin-bottom: 28px
+
+    .graph__item
+      display: none
     
   &__legend
     padding: 28px 35px
